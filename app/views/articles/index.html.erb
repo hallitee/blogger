@@ -1,0 +1,12 @@
+<table>
+<tr>
+<td><%= link_to :title, article_path(:title) %></td>
+<td><%= link_to :body, article_path(:body) %> </td>
+</tr>
+<% @articles.each do |art| %>
+<tr> 
+<td><%= art.title %></td>
+<td><%= art.body %> </td>
+ </tr>
+ <% end %>
+ </table>
