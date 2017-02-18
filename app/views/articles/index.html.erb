@@ -4,18 +4,20 @@
 <table>
 
 <tr>
+<td cell-color="red" ><%= link_to :id, article_path(:id) %></td>
 <td><%= link_to :title, article_path(:title) %></td>
-#<td><%= link_to :symbol, article_path(:symbol) %> </td>
+<td><%= link_to :symbol, article_path(:symbol) %> </td>
 </tr>
 <% @articles.each do |art| %>
 <tr> 
-<td><%= link_to art.title, article_path(art.id)%></td>
-<td><%= link_to art.body, article_path(art.id) %> </td>
+<td><%= link_to art.id, article_path(art.id) %> </td>
+<td><%= link_to art.title, article_path(art)%></td>
+<td><%=  art.body %> </td>
  </tr>
  <% end %>
  </table>
 
- <h4> <%= link_to "Create New Article", new_article_path, class: 'article_title' %> </h4>
+ <h4> <%= link_to "Create New Article", new_article_path, class: 'article_title' , id: 'new_article_css'%> </h4>
 </body>
 
 </html>
