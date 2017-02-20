@@ -18,9 +18,16 @@ include ArticlesHelper
 	@articles.save
 	redirect_to article_path(@articles)
 	end
+
 	def destroy
 	@articles = Article.find(params[:id])
 	@articles.destroy	
+	redirect_to action:  'index'
+	end 
+	def edit
+		@articles = Article.find(params[:id])
+		@articles.update(article_params)
+		redirect_to article_path(@articles)
 	end 
 
 end

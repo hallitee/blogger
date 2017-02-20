@@ -2,6 +2,11 @@
 <p> <%= @articles.body %></p>
 
 <h3><%= link_to "Back to Articles list", articles_path %></h3>
-<h3><%= link_to "Delete", articles_path(@articles), method: :delete %></h3>
+<br>
+
+<p> <%= link_to "Edit", edit_article_path(@articles) %> </p>
+<h3><%= link_to "delete", article_path(@articles.id), method: :delete, data: {confirm: "Really delete the article?"}
+%></h3>
+
 
 

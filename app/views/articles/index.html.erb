@@ -4,9 +4,9 @@
 <table>
 
 <tr>
-<td cell-color="red" ><%= link_to :id, article_path(:id) %></td>
-<td><%= link_to :title, article_path(:title) %></td>
-<td><%= link_to :symbol, article_path(:symbol) %> </td>
+<td ><%= link_to :id, articles_path(:id) %></td>
+<td><%= link_to :title, articles_path(:title) %></td>
+<td><%= link_to :symbol, articles_path(:symbol) %> </td>
 </tr>
 <% @articles.each do |art| %>
 <tr> 
